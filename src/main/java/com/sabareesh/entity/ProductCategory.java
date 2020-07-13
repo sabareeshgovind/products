@@ -13,11 +13,15 @@ import javax.persistence.Table;
 
 import lombok.Data;
 
+
+
 @Entity
 @Table(name="product_category")
 @Data 
 //@Getter
 //@Setter
+//@NoArgsConstructor
+//@AllArgsConstructor
 public class ProductCategory {
 	
 	@Id
@@ -31,4 +35,5 @@ public class ProductCategory {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
     private Set<Product> products;
 
+	
 }
